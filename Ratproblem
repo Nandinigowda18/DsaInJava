@@ -1,0 +1,45 @@
+import java.util.*;
+public class Ratproblem {
+public static int func(int r, int unit, int[] arr, int n) {
+	if(arr== null) {
+		return -1;
+	}
+	int res= unit*r;
+	int sum=0;
+	int count =0;
+	
+	for(int i=0;i<n;i++) {
+		sum=sum+arr[i];
+		count++;
+		if(sum >=res) {
+			 return count ;
+		}
+	}
+	return 0 ;
+}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc= new Scanner(System.in);
+System.out.println("enetr n");
+int n= sc.nextInt();
+
+
+System.out.println("enetr r");
+int r=sc.nextInt();
+System.out.println("enetr unit");
+int unit=sc.nextInt();
+System.out.println("enetr arr elem");
+int[] arr = new int[n];
+for(int i=0;i<n;i++) {
+	arr[i]=sc.nextInt();
+}
+
+
+System.out.println(func(r,unit,arr,n));
+
+
+	}
+
+}
