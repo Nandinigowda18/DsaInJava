@@ -1,0 +1,23 @@
+import java.util.*;
+public class RockpapaerScissors {
+	
+	public static String  game (String ach) {
+		if(ach=="rock") {
+			return "paper";
+			}
+		else if(ach=="paper") {
+			return "scissor";
+		}else if(ach=="scissor") {
+			return "rock";
+		}
+		return "none";
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(game("scissor"));
+
+	}
+
+}
